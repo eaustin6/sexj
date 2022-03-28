@@ -623,17 +623,17 @@ class GoogleDriveHelper:
 
             try:
                 self.path.append(
-                telegra_ph[acc_no].create_page(title='SearchX',
-                                          author_name='sito',
-                                          author_url='https://t.me/niaz_ahsan',
+                telegra_ph[acc_no].create_page(title='Uncensored Playground ',
+                                          author_name='Uncensored Playground 18+',
+                                          author_url='https://t.me/UncensoredPlaygrounds',
                                           html_content=self.telegraph_content[i])['path'])
             except RetryAfterError as e:
                 LOGGER.info(f"Telegra.ph limit hit, sleeping for {e.retry_after}s")
                 time.sleep(e.retry_after)
                 self.path.append(
-                telegra_ph[acc_no].create_page(title='SearchX',
-                                          author_name='sito',
-                                          author_url='https://t.me/niaz_ahsan',
+                telegra_ph[acc_no].create_page(title='Uncensored Playground ',
+                                          author_name='Uncensored Playground ',
+                                          author_url='https://https://t.me/UncensoredPlaygrounds',
                                           html_content=self.telegraph_content[i])['path'])
 
             if i != 0:
@@ -641,21 +641,21 @@ class GoogleDriveHelper:
                 self.telegraph_content[i-1] += f'<b> | <a href="https://telegra.ph/{self.path[i]}">Next</a></b>'
                 try:
                     telegra_ph[ (acc_no - 1) if i % page_per_acc == 0 else acc_no ].edit_page(path = self.path[i-1],
-                                    title = 'SearchX',
-                                    author_name='sito',
-                                    author_url='https://t.me/niaz_ahsan',
+                                    title = 'Uncensored Playground ',
+                                    author_name='Uncensored Playground 18+',
+                                    author_url='https://https://t.me/UncensoredPlaygrounds',
                                     html_content=self.telegraph_content[i-1])
                 except RetryAfterError as e:
                     LOGGER.info(f"Telegra.ph limit hit, sleeping for {e.retry_after}s")
                     time.sleep(e.retry_after)
                     telegra_ph[ acc_no - 1 if i % page_per_acc == 0 else acc_no ].edit_page(path = self.path[i-1],
-                                    title = 'SearchX',
-                                    author_name='sito',
-                                    author_url='https://t.me/niaz_ahsan',
+                                    title = 'Uncensored Playground ',
+                                    author_name='Uncensored Playground 18+',
+                                    author_url='https://https://t.me/UncensoredPlaygrounds',
                                     html_content=self.telegraph_content[i-1])
 
 
         buttons = button_builder.ButtonMaker()
-        buttons.build_button("VIEW HERE", f"https://telegra.ph/{self.path[0]}")
+        buttons.build_button("VIEW RESULT✅", f"https://telegra.ph/{self.path[0]}")
 
         return msg, InlineKeyboardMarkup(buttons.build_menu(1))
