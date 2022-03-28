@@ -2,8 +2,8 @@ class _BotCommands:
     def __init__(self):
         self.StartCommand = 'start'
         self.ListCommand = 's'
-        self.CloneCommand = 'c'
-        self.CountCommand = 'count'
+        self.CloneCommand = 'cl'
+        self.CountCommand = 'cn'
         self.PermissionCommand = 'perm'
         self.DeleteCommand = 'del'
         self.AuthorizeCommand = 'authorize'
@@ -11,6 +11,6 @@ class _BotCommands:
         self.UsersCommand = 'users'
         self.ShellCommand = 'shell'
         self.LogCommand = 'log'
-        self.HelpCommand = 'help'
+        self.HelpCommand = 'halp'
 
 BotCommands = _BotCommands()
