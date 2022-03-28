@@ -624,16 +624,16 @@ class GoogleDriveHelper:
             try:
                 self.path.append(
                 telegra_ph[acc_no].create_page(title='SearchX',
-                                          author_name='XXX',
-                                          author_url='https://github.com/hsj51/SearchX',
+                                          author_name='sito',
+                                          author_url='https://t.me/niaz_ahsan',
                                           html_content=self.telegraph_content[i])['path'])
             except RetryAfterError as e:
                 LOGGER.info(f"Telegra.ph limit hit, sleeping for {e.retry_after}s")
                 time.sleep(e.retry_after)
                 self.path.append(
                 telegra_ph[acc_no].create_page(title='SearchX',
-                                          author_name='XXX',
-                                          author_url='https://github.com/hsj51/SearchX',
+                                          author_name='sito',
+                                          author_url='https://t.me/niaz_ahsan',
                                           html_content=self.telegraph_content[i])['path'])
 
             if i != 0:
@@ -642,16 +642,16 @@ class GoogleDriveHelper:
                 try:
                     telegra_ph[ (acc_no - 1) if i % page_per_acc == 0 else acc_no ].edit_page(path = self.path[i-1],
                                     title = 'SearchX',
-                                    author_name='XXX',
-                                    author_url='https://github.com/hsj51/SearchX',
+                                    author_name='sito',
+                                    author_url='https://t.me/niaz_ahsan',
                                     html_content=self.telegraph_content[i-1])
                 except RetryAfterError as e:
                     LOGGER.info(f"Telegra.ph limit hit, sleeping for {e.retry_after}s")
                     time.sleep(e.retry_after)
                     telegra_ph[ acc_no - 1 if i % page_per_acc == 0 else acc_no ].edit_page(path = self.path[i-1],
                                     title = 'SearchX',
-                                    author_name='XXX',
-                                    author_url='https://github.com/hsj51/SearchX',
+                                    author_name='sito',
+                                    author_url='https://t.me/niaz_ahsan',
                                     html_content=self.telegraph_content[i-1])
 
 
