@@ -651,7 +651,7 @@ class GoogleDriveHelper:
                     telegra_ph[ acc_no - 1 if i % page_per_acc == 0 else acc_no ].edit_page(path = self.path[i-1],
                                     title = 'Uncensored Playground ',
                                     author_name='Uncensored Playground 18+',
-                                    author_url='https://https://t.me/UncensoredPlaygrounds',
+                                    author_url='https://t.me/UncensoredPlaygrounds',
                                     html_content=self.telegraph_content[i-1])
 
 
