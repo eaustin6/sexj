@@ -14,7 +14,7 @@ def start(update, context):
             sendMessage(f"I'm alive :)", context.bot, update)
         LOGGER.info('Granted: {} [{}]'.format(update.message.from_user.first_name, update.message.from_user.id))
     else:
-        sendMessage(f"Access denied", context.bot, update)
+        sendMessage(f"You must join @UncensoredPlaygrounds to use this bot", context.bot, update)
         LOGGER.info('Denied: {} [{}]'.format(update.message.from_user.first_name, update.message.from_user.id))
 
 def bot_help(update, context):
