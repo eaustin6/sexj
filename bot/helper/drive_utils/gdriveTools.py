@@ -633,7 +633,7 @@ class GoogleDriveHelper:
                 self.path.append(
                 telegra_ph[acc_no].create_page(title='Uncensored Playground ',
                                           author_name='Uncensored Playground ',
-                                          author_url='https://https://t.me/UncensoredPlaygrounds',
+                                          author_url='https://t.me/UncensoredPlaygrounds',
                                           html_content=self.telegraph_content[i])['path'])
 
             if i != 0:
@@ -643,7 +643,7 @@ class GoogleDriveHelper:
                     telegra_ph[ (acc_no - 1) if i % page_per_acc == 0 else acc_no ].edit_page(path = self.path[i-1],
                                     title = 'Uncensored Playground ',
                                     author_name='Uncensored Playground 18+',
-                                    author_url='https://https://t.me/UncensoredPlaygrounds',
+                                    author_url='https://t.me/UncensoredPlaygrounds',
                                     html_content=self.telegraph_content[i-1])
                 except RetryAfterError as e:
                     LOGGER.info(f"Telegra.ph limit hit, sleeping for {e.retry_after}s")
