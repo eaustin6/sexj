@@ -35,7 +35,7 @@ logging.getLogger('googleapiclient.discovery').setLevel(logging.ERROR)
 if USE_SERVICE_ACCOUNTS:
     SERVICE_ACCOUNT_INDEX = randrange(len(os.listdir("accounts")))
 
-telegraph_limit = 95
+telegraph_limit = 70
 
 class ThreadWorker(Thread):
 
