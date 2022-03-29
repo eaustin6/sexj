@@ -600,7 +600,8 @@ class GoogleDriveHelper:
         if msg != '':
             self.telegraph_content.append(msg)
 
-        msg = f"Found {content_count} results in {round(time.time() - start_time, 2)}s"
+        msg = f"<b>Found {response_count} results matching '{file_name}' in {len(DRIVE_ID)} Drives</b> " \
+              f"<b>(Time taken {time_taken}s)</b>"
 
 
         total_pages = len(self.telegraph_content)
