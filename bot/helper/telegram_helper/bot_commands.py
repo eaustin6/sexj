@@ -12,5 +12,5 @@ class _BotCommands:
         self.ShellCommand = 'shell'
         self.LogCommand = 'log'
         self.HelpCommand = 'halp'
-        self.ListCommand = 'search'
+        
 BotCommands = _BotCommands()
