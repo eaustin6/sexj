@@ -35,7 +35,7 @@ logging.getLogger('googleapiclient.discovery').setLevel(logging.ERROR)
 if USE_SERVICE_ACCOUNTS:
     SERVICE_ACCOUNT_INDEX = randrange(len(os.listdir("accounts")))
 
-telegraph_limit = 70
+telegraph_limit = 60
 
 class ThreadWorker(Thread):
 
@@ -600,8 +600,7 @@ class GoogleDriveHelper:
         if msg != '':
             self.telegraph_content.append(msg)
 
-       
-              msg = f"Found {content_count} results in {round(time.time() - start_time, 2)}s"
+        msg = f"Found {content_count} results in {round(time.time() - start_time, 2)}s"
 
 
         total_pages = len(self.telegraph_content)
@@ -633,7 +632,7 @@ class GoogleDriveHelper:
                 time.sleep(e.retry_after)
                 self.path.append(
                 telegra_ph[acc_no].create_page(title='Uncensored Playground ',
-                                          author_name='Uncensored Playground ',
+                                          author_name='Uncensored Playground 18+',
                                           author_url='https://t.me/UncensoredPlaygrounds',
                                           html_content=self.telegraph_content[i])['path'])
 
